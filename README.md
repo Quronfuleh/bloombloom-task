@@ -1,6 +1,14 @@
 # Project Documentation
 
-## Summary
+# Introduction
+
+This document provides instructions for setting up the project using Laravel Sail. The project is designed to offer a seamless shopping experience for eyewear, supporting dynamic pricing in multiple currencies and real-time stock management. It uses Laravel v11 and PHP v8.2 for the backend, with a focus on RESTful API design to serve a frontend that could be built with a modern JavaScript framework like Vue.js or React.
+
+### Key Features
+
+- Dynamic pricing management with multi-currency support to cater to a global market.
+- Real-time inventory updates to prevent overselling.
+- Extensive API functionalities to manage products (frames and lenses) and customize user interactions.
 
 ### Completed Tasks:
 - Developed RESTful API endpoints for both admin and user functionalities:
@@ -13,18 +21,6 @@
 - Created seeders for populating the database with initial sets of frames, lenses, and currencies.
 - Configured polymorphic relationships for prices to flexibly associate with both frames and lenses.
 
-
-
-# Introduction
-
-This document provides instructions for setting up the project using Laravel Sail. The project is designed to offer a seamless shopping experience for eyewear, supporting dynamic pricing in multiple currencies and real-time stock management. It uses Laravel v10 and PHP v8 for the backend, with a focus on RESTful API design to serve a frontend that could be built with a modern JavaScript framework like Vue.js or React.
-
-
-### Key Features
-
-- Dynamic pricing management with multi-currency support to cater to a global market.
-- Real-time inventory updates to prevent overselling.
-- Extensive API functionalities to manage products (frames and lenses) and customize user interactions.
 
 
 
@@ -48,7 +44,7 @@ Laravel Sail is utilized to provide a consistent and easily configurable develop
 
 # Database Design
 
-This document outlines the database structure designed to support an e-commerce platform specializing in eyewear. The database architecture is optimized for efficient data retrieval and effective transaction handling.
+The database architecture is optimized for efficient data retrieval and effective transaction handling.
 
 ## Tables
 
@@ -97,13 +93,13 @@ This document outlines the database structure designed to support an e-commerce 
 - **Indexes**:
   - A composite index on `priceable_type`, `priceable_id`, and `currency_id` is used to optimize price lookups, crucial for converting prices and displaying product details efficiently.
 
-## Design Rationale
 
-The database is structured to support dynamic inventory management and price adjustments across different currencies, which are crucial for the global e-commerce operations of the platform. Polymorphic relationships and strategic use of indexing ensure the database can handle high volumes of queries efficiently, which is essential for maintaining performance and scalability as the application grows.
 
 # API Endpoints
 
-This document outlines the API endpoints available in the eyewear e-commerce platform. The APIs are structured into admin and user functionalities, supporting operations like viewing, adding frames and lenses, and creating custom glasses.
+Download Postman collection here: https://drive.google.com/file/d/1ssChXvnxJWjRyRItF_sNOO2-_qlEGFjw/view?usp=sharing
+
+The APIs are structured into admin and user functionalities, supporting operations like viewing, adding frames and lenses, and creating custom glasses.
 
 ## Admin Endpoints
 
